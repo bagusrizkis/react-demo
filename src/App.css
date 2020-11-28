@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -20,19 +9,62 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header > .input-and-btn {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-header > .input-and-btn > input {
+  padding: 1rem;
+  outline: none;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+.App-header > .input-and-btn > button {
+  font-size: 1.5rem;
+  background-color: #61dafb;
+  outline: none;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.draggable-box {
+  position: absolute;
+  cursor: move;
+  color: black;
+  min-width: 140px;
+  border-radius: 5px;
+  padding: 1em;
+  margin: auto;
+  user-select: none;
+  text-overflow: inherit;
+  display: table;
+}
+
+.draggable-box > p {
+  /* padding: 0.5rem; */
+  max-width: 100%;
+}
+
+.draggable-box:hover #btn-delete {
+  display: inherit;
+}
+
+#btn-delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  display: none;
 }
